@@ -1,5 +1,7 @@
-
 @import "bootstrap";
+
+
+$grayMediumLight: #eaeaea;
 
 /* universal */
 
@@ -21,11 +23,11 @@ textarea {
 
 .center {
   text-align: center;
+  h1 {
+    margin-bottom: 10px;
+  }
 }
 
-.center h1 {
-  margin-bottom: 10px;
-}
 
 
 /* typography */
@@ -47,7 +49,7 @@ h2 {
   margin-bottom: 30px;
   text-align: center;
   font-weight: normal;
-  color: #999;
+  color: $grayLight;
 }
 
 p {
@@ -68,41 +70,35 @@ p {
   padding-top: 9px;
   font-weight: bold;
   line-height: 1;
-}
-
-#logo:hover {
-  color: #fff;
+  &:hover {
+  color: white;
   text-decoration: none;
+  }
 }
-
 
 /* footer */
 
 footer {
   margin-top: 45px;
   padding-top: 5px;
-  border-top: 1px solid #eaeaea;
-  color: #999;
-}
+  border-top: 1px solid $grayMediumLight;
+  color: $grayLight;
+    a {
+      color: $gray;
+        &:hover {
+        color: $grayDarker;
+        }
+      }
+  small {
+      float: left;
+  }
 
-footer a {
-  color: #555;
-}
-
-footer a:hover {
-  color: #222;
-}
-
-footer small {
-  float: left;
-}
-
-footer ul {
-  float: right;
-  list-style: none;
-}
-
-footer ul li {
-  float: left;
-  margin-left: 10px;
+  ul {
+      float: right;
+      list-style: none;
+    li {
+      float: left;
+        margin-left: 10px;
+    } 
+  }
 }
