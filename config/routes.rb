@@ -1,5 +1,13 @@
 SampleApp::Application.routes.draw do
-  get "users/new"
+  resources :users
+  # we can get rid of:
+  # get "users/new"
+  # because resources :users doesn't just add a working /users/1 URL,
+  # it gives our aplication all the actions needed for a RESTful Users resource
+  
+
+
+
   #this was genereated automatically with the Users controller
   root 'static_pages#home'
   match '/signup',  to: 'users#new',            via: 'get'
