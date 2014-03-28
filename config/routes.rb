@@ -6,6 +6,7 @@ SampleApp::Application.routes.draw do
   # it gives our aplication all the actions needed for a RESTful Users resource
   
   resources :sessions, only: [:new, :create, :destroy]
+  resources :microposts, only: [:create, :destroy]
 
 
   #this was genereated automatically with the Users controller
