@@ -1,12 +1,17 @@
 SampleApp::Application.routes.draw do
-  resources :users
+  resources :users do
+    member do
+      get :following, :followers
+    end
+  end
   # we can get rid of:
   # get "users/new"
   # because resources :users doesn't just add a working /users/1 URL,
   # it gives our aplication all the actions needed for a RESTful Users resource
   
-  resources :sessions, only: [:new, :create, :destroy]
-  resources :microposts, only: [:create, :destroy]
+  resources :sessions,      only: [:new, :create, :destroy]
+  resources :microposts,    only: [:create, :destroy]
+  resources :relationships, only: [:create, :destroy]
 
 
   #this was genereated automatically with the Users controller
